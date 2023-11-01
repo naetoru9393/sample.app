@@ -81,4 +81,7 @@ Rails.application.configure do
   config.hosts << pf_host
 
   config.action_cable.allowed_request_origins = ["https://#{pf_host}"]
+
+  host = 'localhost:3000'                     # ローカル環境
+  config.action_mailer.default_url_options = { host: host, protocol: 'http' }
 end
